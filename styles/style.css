@@ -1,0 +1,605 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter";
+  font-size: 16px;
+}
+body {
+  background-color: #f0fdf4;
+}
+
+.section-title {
+  text-align: center;
+}
+
+button:active,
+li:active,
+a:active,
+.tree-name:active,
+.categories-title:active,
+.remove-btn:active {
+  transform: scale(0.95);
+}
+
+.yellow-btn {
+  background-color: #facc15;
+  color: #15803d;
+  border-radius: 999px;
+  border: 0px;
+  padding: 12px 20px;
+  font-weight: 500;
+}
+
+.dropdown {
+  display: none;
+}
+
+.clickable-text,
+button,
+.tree-name {
+  cursor: pointer;
+}
+
+/* navigation section */
+nav {
+  background-color: #15803d;
+  color: white;
+  height: 90px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 135px;
+  height: inherit;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+}
+
+/* banner section */
+.banner {
+  background-color: #cff0dc;
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner-content h2 {
+  margin-bottom: 8px;
+}
+.banner-content p {
+  margin-bottom: 24px;
+}
+
+/* trees section */
+.trees-section {
+  margin: 100px 135px;
+}
+
+.trees-section .section-title {
+  margin-bottom: 40px;
+}
+.trees-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 30px;
+}
+
+.categories {
+  list-style: none;
+  margin-top: 16px;
+}
+
+.categories li {
+  padding: 8px 10px;
+  border-radius: 4px;
+}
+
+.categories li:hover {
+  background-color: #15803c75;
+}
+
+.categories li.active {
+  background-color: #15803d;
+  color: white;
+}
+
+#trees-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.tree-card {
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  justify-content: space-between;
+}
+.tree-card img {
+  width: 100%;
+  border-radius: 8px;
+  height: 185px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.tree-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tree-additional-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* modal */
+.tree-card-modal {
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  width: 90%;
+  max-width: 600px;
+}
+
+.tree-image-modal {
+  /* width: 100%;
+  height: auto; */
+  border-radius: 8px;
+}
+/* end of modal part */
+
+.category-tag {
+  padding: 4px 12px;
+  color: #15803d;
+  background-color: #dcfce7;
+  border-radius: 999px;
+  border: none;
+}
+
+.cart-btn {
+  background-color: #15803d;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 0px;
+}
+
+.cart-btn:hover {
+  background-color: #0d5326;
+}
+
+.cart-btn:active {
+  background-color: #15803d;
+}
+
+.cart-sidebar {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: white;
+}
+
+.cart-content,
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cart-item {
+  background-color: #f0fdf4;
+  border-radius: 8px;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.total-price {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+/* about section */
+.about-section {
+  width: 1090px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.about-content img {
+  border-radius: 10px;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-list {
+  margin-left: 20px;
+}
+
+/* impact section */
+.impact-section {
+  background-color: #cff0dc;
+  margin-top: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.impact-container {
+  width: 1650px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.impact-stats {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+  text-align: center;
+}
+
+.stat-card {
+  background-color: white;
+  width: 500px;
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.stat-number {
+  color: #15803d;
+  margin-bottom: 12px;
+}
+
+/* donation section */
+.donation-section {
+  background-color: #166534;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.donation-container {
+  margin: 100px 0px;
+  width: 650px;
+}
+
+.donation-container h2 {
+  color: white;
+  margin-bottom: 40px;
+}
+
+.donation-form {
+  background-color: #15803d;
+  border-radius: 12px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-input {
+  height: 50px;
+  border-radius: 6px;
+  padding: 12px;
+  border: 0px;
+  background-color: white;
+}
+
+/* footer section */
+footer {
+  text-align: center;
+  background-color: #14532d;
+  color: white;
+  padding: 24px;
+}
+
+.menu {
+  padding: 15px;
+  background-color: #facc15;
+}
+
+.menu li a {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 600;
+  color: #15803d;
+}
+
+/* mobile responsive */
+
+@media (max-width: 1555px) {
+  .impact-stats {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1450px) {
+  #trees-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 1350px) {
+  .banner img,
+  .about-content img {
+    display: none;
+  }
+
+  .banner {
+    justify-content: center;
+    padding: 16px 0px;
+  }
+
+  .trees-section {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 1150px) {
+  #trees-grid {
+    grid-template-columns: 1fr;
+  }
+  .trees-section {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  .about-section {
+    width: 80%;
+    text-align: center;
+  }
+
+  .cta-button {
+    display: none;
+  }
+}
+
+@media (max-width: 750px) {
+  #trees-grid,
+  .trees-container,
+  .impact-stats,
+  .about-content,
+  .donation-form {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .banner img,
+  .about-content img {
+    display: none;
+  }
+
+  .nav-container {
+    justify-content: center;
+  }
+
+  .nav-menu,
+  .cta-button {
+    display: none;
+  }
+
+  .trees-section,
+  .impact-section,
+  .donation-container,
+  .about-section,
+  .impact-container,
+  .nav-container {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+    box-sizing: border-box;
+  }
+
+  .tree-card,
+  .stat-card,
+  .donation-form {
+    width: 100%;
+  }
+
+  .categories-sidebar,
+  .cart-sidebar {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .trees-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .impact-stats {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .donation-form {
+    padding: 24px 12px;
+  }
+
+  .impact-section {
+    margin: 0;
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* footer {
+    margin-bottom: 69px;
+  } */
+  #categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  #categories-container .category {
+    border-radius: 999px;
+  }
+
+  * {
+    text-align: center;
+  }
+
+  .dropdown {
+    display: flex;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 25px;
+  }
+}
+
+/* typography */
+.logo-text {
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+a,
+span,
+label {
+  color: #1f2937;
+}
+
+footer p {
+  color: white;
+}
+
+.category-tag {
+  font-family: "Geist", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.section-title,
+.banner-title,
+.tree-name,
+.stat-number,
+.cart-title,
+.categories-title,
+.price {
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+.banner-title {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+.impact-stats .stat-number {
+  font-size: 32px;
+  font-weight: 600;
+}

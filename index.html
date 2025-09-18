@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title and logo  -->
+    <title>Green Earth</title>
+    <link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=15937&format=png&color=28a745" type="png">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- get font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- daisyui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h7" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Plant a Tree</a></li>
+                </ul>
+            </div>
+            <div class="nav-container">
+                <div class="logo clickable-text">
+                    <img src="/assets/sprout.png" alt="sprout logo">
+                    <h1 class="logo-text">Green Earth</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Plant a Tree</a></li>
+                </ul>
+                <button class="cta-button yellow-btn">Plant a Tree</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="banner">
+            <img src="/assets/hero-leaf1.png" alt="a leaf">
+            <div class="banner-content">
+                <h2 class="banner-title">Plant a Tree, Grow a Future</h2>
+                <p class="banner-text">Join our mission to plant 1 million trees and make the Earth greener for future
+                    generations.</p>
+                <button class="banner-button yellow-btn">Get Involved</button>
+            </div>
+            <img src="/assets/hero-leaf2.png" alt="same leaf but mirrored">
+        </section>
+
+        <section class="trees-section">
+            <h2 class="section-title">Choose Your Trees</h2>
+            <div class="trees-container">
+                <aside class="categories-sidebar">
+                    <div class="categories-list">
+                        <h3 class="categories-title clickable-text">Categories</h3>
+                        <ul id="categories-container" class="categories">
+                            <!-- api -->
+                        </ul>
+                    </div>
+                </aside>
+                <div id="trees-loading" class="flex justify-center my-10" style="display:none;">
+                    <span class="loading loading-spinner loading-lg"></span>
+                </div>
+                <div id="trees-grid">
+                    <!-- api -->
+                </div>
+                <!-- modal -->
+                <dialog id="plant-modal" class="modal">
+                    <div class="modal-box tree-card-modal">
+                        <h4 id="modal-tree-name" class="tree-name"></h4>
+                        <img id="modal-tree-image" src="" alt="" class="tree-image-modal">
+                        <div class="tree-info">
+                            <p id="modal-tree-description" class="tree-details"></p>
+                            <div class="tree-additional-info">
+                                <button class="category-tag" id="modal-tree-category"></button>
+                                <p class="price">৳<span id="modal-tree-price"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <form method="dialog" class="modal-backdrop">
+                        <button>Close</button>
+                    </form>
+                </dialog>
+                <aside class="cart-sidebar">
+                    <h3 class="cart-title">Your Cart</h3>
+                    <div class="cart-content">
+                        <!-- api -->
+                        <!-- <div class="cart-items">
+                            <div class="cart-item">
+                                <div class="item-details">
+                                    <h4 class="item-name">Mango Tree</h4>
+                                    <p class="item-price-and-quantity">৳500 x 1</p>
+                                </div>
+                                <div class="remove-btn">×</div>
+                            </div>
+                            <div class="cart-item">
+                                <div class="item-details">
+                                    <h4 class="item-name">Licchi Tree</h4>
+                                    <p class="item-price-and-quantity">৳100 x 10</p>
+                                </div>
+                                <div class="remove-btn">×</div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="total-price">
+                            <p>Total: </p>
+                            <p>৳600</p>
+                        </div> -->
+
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <h2 class="section-title">About the Campaign</h2>
+            <div class="about-content">
+                <img src="/assets/about.png" alt="A small plant">
+                <div class="about-text">
+                    <p class="about-description">Green Earth is a global tree plantation initiative dedicated to
+                        fighting climate change. Since
+                        our start, we've planted over 500,000 trees worldwide. By joining our campaign, you help restore
+                        forests, create habitats for wildlife, and combat global warming.</p>
+                    <ul class="about-list">
+                        <li class="about-item">Restoration of natural habitats</li>
+                        <li class="about-item">Improvement of air quality</li>
+                        <li class="about-item">Support for local communities</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="impact-section">
+            <div class="impact-container">
+                <h2 class="section-title">Our Impact</h2>
+                <div class="impact-stats">
+                    <div class="stat-card">
+                        <h3 class="stat-number">500K+</h3>
+                        <p class="stat-label">Trees Planted</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="stat-number">120+</h3>
+                        <p class="stat-label">Communities Involved</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="stat-number">30+</h3>
+                        <p class="stat-label">Countries Reached</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="donation-section">
+            <div class="donation-container">
+                <h2 class="section-title">Plant a Tree Today</h2>
+                <form class="donation-form">
+                    <div class="form-inputs">
+                        <input type="text" placeholder="Your Name" class="form-input">
+                        <input type="email" placeholder="Your Email Address" class="form-input">
+                        <select id="num-trees" class="form-input" required>
+                            <option hidden>Number of Trees</option>
+                            <option>1 Tree - $5</option>
+                            <option>5 Tree - $25</option>
+                            <option>10 Tree - $50</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="form-submit yellow-btn" onclick="alert('Thanks for donating!')">Donate
+                        Now</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="footer-text">&copy; 2025 Green Earth. All Rights Reserved.</p>
+    </footer>
+
+    <script src="/scripts/script.js"></script>
+</body>
+
+</html>
